@@ -18,6 +18,10 @@ include_directories(include)
 # add source code
 add_subdirectory(src)
 
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # create excecutable and link
 add_executable(brickbreaker src/main.cpp)
 target_link_libraries(brickbreaker glfw ${GLFW_LIBRARIES} source)
